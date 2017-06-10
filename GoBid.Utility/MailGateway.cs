@@ -5,7 +5,8 @@ using System.Text;
 
 namespace GoBid.Utility
 {
-    class MailGateway
+    public class MailGateway
     {
+
     }
 }
