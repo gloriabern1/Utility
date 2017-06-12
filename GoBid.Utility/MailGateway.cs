@@ -15,9 +15,6 @@ namespace GoBid.Utility
         public static string SendmailforRegisterconfirm(string Senderemail, string Receivermail, string mailsubject, string Username)
         {
          
-
-
-
            try
             {
                 // initializing mail components
