@@ -10,6 +10,8 @@ namespace GoBid.Utility
         public static string FilterUserInput(string inputString)
         {
 
+
+
             try
             {
 
