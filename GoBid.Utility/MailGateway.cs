@@ -14,6 +14,8 @@ namespace GoBid.Utility
         public static string Error;
         public static string SendmailforRegisterconfirm(string Senderemail, string Receivermail, string mailsubject, string Username)
         {
+
+
          
            try
             {
