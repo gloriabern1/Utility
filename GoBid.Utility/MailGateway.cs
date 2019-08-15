@@ -73,17 +73,32 @@ namespace GoBid.Utility
         public static string Emailhtmlcontent(string username)
         {
             StringBuilder SbBody = new StringBuilder();
-            SbBody.Append(" <html xmlns='http://www.w3.org/1999/xhtml'>");
-            SbBody.Append(" <head><title>Confirmation mail</title></head>");
-            SbBody.Append("< body >");
-            SbBody.Append("< img src = '//www.GoBid.com/images/Blue/Logo.png'/><br /><br />");
-            SbBody.Append("<div style = 'border-top:3px solid #22BCE5' > &nbsp;</div>");
-            SbBody.Append("<span style = 'font-family:Arial; font-size:10pt' >");
+            SbBody.Append("<html xmlns='http://www.w3.org/1999/xhtml'>");
+            SbBody.Append("<head><title>Confirmation mail</title></head>");
+            SbBody.Append("<body>");
+            SbBody.Append("<img src = //www.GoBid.com/images/Blue/Logo.png'/><br/><br/>");
+            SbBody.Append("<div style ='border-top:3px solid #22BCE5'> &nbsp;</div>");
+            SbBody.Append("<span style ='font-family:Arial; font-size:10pt'>");
             SbBody.Append("Hello < b >{username} click the button below to confirm your email and complete your registration <br/> <br/>");
-            SbBody.Append(" <a href='www.GoBid.com/Registration/Confirm.aspx' style='background-color:blue; font-size:14px'>Click Here</a>");
-            SbBody.Append("< /span >");
-            SbBody.Append("< /body >");
-            SbBody.Append("< /html >");
+            SbBody.Append("<a href='www.GoBid.com/Registration/Confirm.aspx' style='background-color:blue; font-size:14px'>Click Here</a>");
+            SbBody.Append("</span>");
+            SbBody.Append("</body >");
+            SbBody.Append("</html >");
+            return SbBody.ToString();
+        }
+        public static string Emailhtmlattachmentcontent(string emailbody)
+        {
+            StringBuilder SbBody = new StringBuilder();
+            SbBody.Append("<html xmlns='http://www.w3.org/1999/xhtml'>");
+            SbBody.Append("<head><title>Confirmation mail</title></head>");
+            SbBody.Append("<body>");
+            SbBody.Append("<img src = //www.CeeDMS.com/images/Blue/Logo.png'/><br/><br/>");
+            SbBody.Append("<div style ='border-top:3px solid #22BCE5'> &nbsp;</div>");
+            SbBody.Append("<span style ='font-family:Arial; font-size:10pt'>");
+            SbBody.Append("Hello <b>{emailbody} <br/> <br/>");
+            SbBody.Append("</span>");
+            SbBody.Append("</body >");
+            SbBody.Append("</html >");
             return SbBody.ToString();
         }
     }
