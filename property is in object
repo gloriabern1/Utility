@@ -1,0 +1,15 @@
+//Check If property is in object
+
+
+        //private  bool Exists(string propertyName, SanefWithoutBVN srcObject)
+        //{
+        //    if (srcObject == null)
+        //        throw new System.ArgumentNullException("srcObject");
+
+        //    if ((propertyName == null) || (propertyName == String.Empty) || (propertyName.Length == 0))
+        //        throw new System.ArgumentException("Property name cannot be empty or null.");
+
+        //    PropertyInfo propInfoSrcObj = srcObject.GetType().GetProperty(propertyName);
+
+        //    return (propInfoSrcObj != null);
+        //}
