@@ -1,0 +1,11 @@
+    var client = new RestClient(url);
+                var resource = "api/finacle/account/details?searchList=" + accountNumber;
+                var request = new RestRequest(resource, Method.GET);
+                request.AddHeader("Content-Type", "application/json");
+                request.AddHeader("client-id", id);
+                request.AddHeader("client-key", key);
+                //request.AddJsonBody(messageBody);
+
+
+                var rawResponse = client.Execute(request);
+                var beResponse = JsonConvert.DeserializeObject<List<BEColigo>>(rawResponse.Content);
