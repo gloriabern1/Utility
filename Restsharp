@@ -1,0 +1,22 @@
+         var baseUrl = SanefConfig.ColigoUrl;
+                var client = new RestClient(baseUrl);
+                var resource = "api/internaltransfer";
+                //IRestRequest request = new RestRequest(resource, RestSharp.Method.POST);
+                var request = new RestRequest(resource, RestSharp.Method.POST);
+                request.AddHeader("Content-Type", "application/json");
+                request.AddHeader("client-id", SanefConfig.ColigoClientId);
+                request.AddHeader("client-key", SanefConfig.ColigoClientKey);
+                //transferRequestColigo is  object of the transfer paraemters
+                request.AddJsonBody(transferRequestColigo);
+
+                var response = client.Execute(request);
+                LogHelper.Info($"Coligo Response: {response.Content}");
+                
+                
+                transferRequestColigo
+                
+                {{"tranDate":"2-1-2020","sourceAccount":"6310029075",
+                "destinationAccount":"2028240675",
+                "transferAmount":"500",
+                "narration":"sample string 4",
+                "referenceNumber":20876017}}
